@@ -1,0 +1,245 @@
+body {
+  background-color: aquamarine;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: blue;
+  padding: 15px;
+}
+
+nav a {
+  color: beige;
+  background-color: blueviolet;
+  border-radius: 15px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: darkslategray;
+  margin-bottom: 20px;
+}
+
+.intro {
+  padding: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.intro img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: lightgray;
+  margin-bottom: 15px;
+}
+
+.intro-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: lightblue;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.intro-text:hover {
+  border: 15px solid purple;
+  margin-bottom: 10px;
+  transform: translateY(45px);
+  transition: all 3s ease-out;
+}
+
+.learn {
+  margin-top: 40px;
+}
+
+.subjects {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.subject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 40px;
+  box-shadow: 0 4px 10px indigo;
+  overflow: hidden;
+}
+
+.subject img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.subject p {
+  font-size: 0.85rem;
+  padding: 5px;
+  margin: 0;
+}
+
+.subject:hover {
+  animation: bounce 0.6s;
+}
+
+/* Bounce animation keyframes */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-15px); }
+  50%  { transform: translateY(0); }
+  70%  { transform: translateY(-7px); }
+  100% { transform: translateY(0); }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: blue;
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: blueviolet;
+  color: lightgoldenrodyellow;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.github-btn:hover {
+  background-color: mediumspringgreen;
+  color: black;
+  transition: all 2s ease;
+}
+
+.github-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.project-card {
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+}
+
+.project-card h2 {
+  margin-top: 0;
+  color: darkblue;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin: 15px 0;
+}
+
+.project-btn {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.project-btn:hover {
+  background-color: indigo;
+}
+
+.fun-facts {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  box-shadow: 3px 4px 5px black;
+}
+
+.fun-facts:hover {
+  background-color: coral;
+  border: 5px dashed red;
+  transition: all 3s ease-in;
+}
+
+.fun-facts ul {
+  list-style-type: square;
+  padding-left: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.fun-facts a {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.fun-facts a {
+  color: darkblue;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fun-facts a:hover::before {
+  content: '[';
+}
+
+.fun-facts a:hover::after {
+  content: ']';
+}
+
+/* Hover + focus animation */
+.fun-facts a:hover,
+.fun-facts a:focus {
+  color: indigo;
+  transform: scale(1.1);
+}
+
+.fun-facts a:hover::after,
+.fun-facts a:focus::after {
+  left: 100%;
+  transition: left 0.5s ease;
+}
